@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="max-w-2xl mx-auto">
+  <div class="space-y-8">
+    {{ range where .Site.RegularPages.ByDate.Reverse "Section" "posts" }}
+      <article
+        class="bg-white/90 backdrop-blur-md rounded-xl overflow-hidden group transition-all duration-300 relative border border-slate-200/80">
+        <div class="absolute inset-0 shadow-md opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="p-6 relative">
+          <div class="prose prose-slate prose-sm max-w-none">
+            {{ .Content }}
+          </div>
+          {{ $dt := .Date | time.AsTime }}
+          <div class="mt-4 flex justify-end">
+            <time datetime="{{ $dt | time.Format "2006-01-02T15:04:05Z07:00" }}"
+              class="text-xs text-slate-400 inline-flex items-center gap-1 hover:text-slate-600 transition-colors group/time">
+              <svg class="w-3 h-3 shrink-0 transition-transform duration-300 group-hover/time:rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="shrink-0 relative">{{ $dt | time.Format "2 January" }}</span>
+            </time>
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

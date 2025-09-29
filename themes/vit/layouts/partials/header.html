@@ -1,0 +1,18 @@
+<div class="max-w-2xl mx-auto px-4">
+  <div class="flex items-center h-16">
+    <div class="flex items-center gap-2"><a class="group/brand flex items-center" href="/">
+        <div class="w-9 h-9 rounded-full overflow-hidden mr-2.5 shadow-sm group-hover/brand:shadow-md transition-shadow duration-300 border border-slate-200/80 relative">
+          <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-indigo-600/10 opacity-0 group-hover/brand:opacity-100 transition-opacity duration-300 z-10"></div>
+          {{ with resources.Get "images/profile_image.jpg" }}
+            <img class="object-cover group-hover/brand:scale-105 transition-transform duration-300" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+          {{ end }}
+        </div>
+        <span class="text-lg font-bold text-slate-800 group-hover/brand:text-slate-900 transition-colors">okan vurdu</span>
+      </a>
+      <a class="nav-link px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg transition-all duration-300 relative group/nav-link overflow-hidden" href="/hakkimda">
+        <span class="relative z-10">hakkımda</span>
+        <span class="absolute inset-0 bg-slate-100/40 opacity-0 group-hover/nav-link:opacity-100 transition-opacity duration-300"></span>
+      </a>
+    </div>
+  </div>
+</div>

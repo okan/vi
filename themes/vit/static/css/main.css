@@ -1,0 +1,7 @@
+:root {
+  --site-font: "Plus Jakarta Sans";
+}
+
+body {
+  font-family: var(--site-font);
+}
