@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.Lang }}">
-  <head>
-    {{- partial "head.html" . -}}
-  </head>
-  <body class="antialiased min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
-    <div class="fixed inset-0 -z-10 bg-[radial-gradient(45%_50%_at_50%_50%,rgba(56,189,248,0.08)_0%,rgba(56,189,248,0)_100%)] dark:bg-[radial-gradient(45%_50%_at_50%_50%,rgba(56,189,248,0.05)_0%,rgba(56,189,248,0)_100%)]"></div>
-    <header class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-slate-800/50">
-      {{- partial "header.html" . -}}
-    </header>
-    <main class="site-main container mx-auto px-4 py-8">
-      {{- block "main" . }}{{ end }}
-    </main>
-    {{- partial "footer.html" . -}}
-  </body>
+
+<head>
+  {{- partial "head.html" . -}}
+</head>
+
+<body
+  class="antialiased min-h-screen flex flex-col bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
+  <div
+    class="fixed inset-0 -z-10 bg-[radial-gradient(45%_50%_at_50%_50%,rgba(56,189,248,0.08)_0%,rgba(56,189,248,0)_100%)] dark:bg-[radial-gradient(45%_50%_at_50%_50%,rgba(56,189,248,0.05)_0%,rgba(56,189,248,0)_100%)]">
+  </div>
+  <header
+    class="sticky top-0 z-30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-slate-800/50">
+    {{- partial "header.html" . -}}
+  </header>
+  <main class="site-main flex-grow container mx-auto px-4 py-8">
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{- partial "footer.html" . -}}
+</body>
+
 </html>

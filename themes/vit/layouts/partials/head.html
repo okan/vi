@@ -1,6 +1,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else if and (eq .Section "posts") (not .Params.title) }}{{ .Date | time.Format "2 January 2006" }} | {{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 <script>
   tailwind.config = {
