@@ -2,6 +2,7 @@ baseURL = 'https://blog.okanvurdu.com'
 languageCode = 'tr-tr'
 title = 'okan vurdu - blog'
 theme = 'vit'
+timeZone = 'Europe/Istanbul'
 defaultContentLanguage = "tr"
 
 [markup]
