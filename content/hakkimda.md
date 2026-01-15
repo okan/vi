@@ -1,6 +1,8 @@
 ---
 title: "hakkımda"
 url: "/hakkimda"
+_build:
+  list: never
 ---
 
 <div class="max-w-2xl mx-auto px-4">
