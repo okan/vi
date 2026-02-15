@@ -11,4 +11,4 @@ defaultContentLanguage = "tr"
       unsafe = true
 
 [permalinks]
-  posts = '/p/:slug/'
+  gunluk = '/p/:slug/'
